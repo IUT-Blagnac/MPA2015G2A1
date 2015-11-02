@@ -41,4 +41,7 @@ script:
   - casperjs test casperIntervenants.js
   - casperjs test casperProjets.js
   - casperjs test casperSujets.js
+  - git add *
+  - git commit -m "[ci skip]"
+  - git push
   
