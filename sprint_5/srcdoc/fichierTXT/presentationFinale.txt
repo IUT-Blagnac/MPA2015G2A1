@@ -14,9 +14,9 @@ Fiche projet - SPRINT 4
 [icon="../../images/UT2JJ128.png"]
 [TIP]
 ====
-Membres de l'équipe :: Fanny MONTUY, Charles BEAUDONNET, Simon ARMUSIEAUX, Alexis BERNINI, Lucas MESSAGER, Alexandre CASES
+Membres de l'Ã©quipe :: Fanny MONTUY, Charles BEAUDONNET, Simon ARMUSIEAUX, Alexis BERNINI, Lucas MESSAGER, Alexandre CASES
 
-*Université Toulouse 2 - IUT de Blagnac*
+*UniversitÃ© Toulouse 2 - IUT de Blagnac*
 
 Formation:: DUT INFO S3/Module MPA
 Projet:: OPTI/OPTIweb
@@ -36,12 +36,12 @@ Bilan application OPTI
 ----------------------
 
 [role="incremental"]
-- Créer un sujet    
+- CrÃ©er un sujet    
 - Modifier un sujet 
 - Supprimer un sujet 
 - Supprimer un intervenant  
 - Changer un intervenant 
-- Créer les voeux d'un groupe 
+- CrÃ©er les voeux d'un groupe 
 - Modifier les voeux d'un groupe   
 - Afficher/modifier/supprimer le contenue des fichiers (etudiants2014_2015.csv,...)
 
@@ -50,46 +50,46 @@ Bilan application webOPTI
 -------------------------
 
 [role="incremental"]
--En tant qu’internaute, je veux accéder à l’application OPTIweb.html depuis tout support fixe ou mobile
--En tant qu’internaute, je veux pouvoir consulter les projets, les sujets, les étudiants et les intervenants dans des pages séparées
--En tant qu’internaute, je veux pouvoir consulter le nom des développeurs de l’application, le nom du Product Owner ainsi que les technologies utilisées
+-En tant quâ€™internaute, je veux accÃ©der Ã  lâ€™application OPTIweb.html depuis tout support fixe ou mobile
+-En tant quâ€™internaute, je veux pouvoir consulter les projets, les sujets, les Ã©tudiants et les intervenants dans des pages sÃ©parÃ©es
+-En tant quâ€™internaute, je veux pouvoir consulter le nom des dÃ©veloppeurs de lâ€™application, le nom du Product Owner ainsi que les technologies utilisÃ©es
 
 * Page Projets
 
 [role="incremental"]
--En tant qu’internaute, je veux pour chaque projet en voir le nom, le titre, le client, le superviseur, le groupe et les étudiants réalisant le projet
--En tant qu’internaute, je veux pouvoir rechercher un projet dans la liste des projets en fournissant une chaine de caractère quelconque
+-En tant quâ€™internaute, je veux pour chaque projet en voir le nom, le titre, le client, le superviseur, le groupe et les Ã©tudiants rÃ©alisant le projet
+-En tant quâ€™internaute, je veux pouvoir rechercher un projet dans la liste des projets en fournissant une chaine de caractÃ¨re quelconque
 
 * Page Sujets
 
 [role="incremental"]
--En tant qu’internaute, je veux pour chaque sujet en voir le nom, le titre et le ou les noms des groupes d'étudiants réalisant le sujet
--En tant qu’internaute, je veux pouvoir rechercher un sujet dans la liste des sujets en fournissant une chaine de caractère quelconque
--En tant qu’internaute, je veux pouvoir sélectionner un sujet et voir les projets réalisant le sujet
+-En tant quâ€™internaute, je veux pour chaque sujet en voir le nom, le titre et le ou les noms des groupes d'Ã©tudiants rÃ©alisant le sujet
+-En tant quâ€™internaute, je veux pouvoir rechercher un sujet dans la liste des sujets en fournissant une chaine de caractÃ¨re quelconque
+-En tant quâ€™internaute, je veux pouvoir sÃ©lectionner un sujet et voir les projets rÃ©alisant le sujet
 
 * Page Etudiants
 
 [role="incremental"]
--En tant qu’internaute, je veux pour chaque étudiant en voir le nom, le prénom ainsi que son groupe
--En tant qu’internaute, je veux pouvoir rechercher un étudiant dans la liste des étudiants en fournissant une chaine de caractère quelconque
--En tant qu’internaute, je veux pouvoir sélectionner un étudiant et voir le projet qu’il réalise
+-En tant quâ€™internaute, je veux pour chaque Ã©tudiant en voir le nom, le prÃ©nom ainsi que son groupe
+-En tant quâ€™internaute, je veux pouvoir rechercher un Ã©tudiant dans la liste des Ã©tudiants en fournissant une chaine de caractÃ¨re quelconque
+-En tant quâ€™internaute, je veux pouvoir sÃ©lectionner un Ã©tudiant et voir le projet quâ€™il rÃ©alise
 
 * Page Intervenants
 
 [role="incremental"]
--En tant qu’internaute, je veux pour chaque intervenant en voir le nom, le prénom ainsi que le nombre de ses interventions en tant que Client ou Superviseur
--En tant qu’internaute, je veux pouvoir rechercher un intervenant dans la liste des intervenants en fournissant une chaine de caractère quelconque
--En tant qu’internaute, je veux pouvoir sélectionner un intervenant et voir le(s) projet(s) où il intervient
+-En tant quâ€™internaute, je veux pour chaque intervenant en voir le nom, le prÃ©nom ainsi que le nombre de ses interventions en tant que Client ou Superviseur
+-En tant quâ€™internaute, je veux pouvoir rechercher un intervenant dans la liste des intervenants en fournissant une chaine de caractÃ¨re quelconque
+-En tant quâ€™internaute, je veux pouvoir sÃ©lectionner un intervenant et voir le(s) projet(s) oÃ¹ il intervient
 
 
-Tout a été réalisé. 
-Des documentations ont été réalisé pour le makeOPTI et le webOPTI.
+Tout a Ã©tÃ© rÃ©alisÃ©. 
+Des documentations ont Ã©tÃ© rÃ©alisÃ© pour le makeOPTI et le webOPTI.
 
 
 Bilan financier du projet
 -------------------------
 
-|Sprint n°|temps estimé|temps passé
+|Sprint nÂ°|temps estimÃ©|temps passÃ©
 |0|18|22
 |1|29|26.70
 |1bis|20.10|17.35
@@ -107,16 +107,16 @@ coutsHT : 1206.54
 
 Bilan technique du projet
 -------------------------
-Lors de la conception et du développement nous avons rencontré quelques problèmes :
+Lors de la conception et du dÃ©veloppement nous avons rencontrÃ© quelques problÃ¨mes :
 
 [role="incremental"]
 - coupures internet
-- problèmes technique
-- café renversé
+- problÃ¨mes technique
+- cafÃ© renversÃ©
 - fonctionnement des testJunit
-- conflits des fichiers (dépot SVN)
+- conflits des fichiers (dÃ©pot SVN)
 - prise en main difficile des tests casperjs 
-- asciidoc déjà maitrisé par certain membres de l'équipe
+- asciidoc dÃ©jÃ  maitrisÃ© par certain membres de l'Ã©quipe
 
 Bilan humain du projet
 ----------------------
@@ -128,34 +128,34 @@ Points positifs :
 - aide du professeur
 
 
-Points négatifs :
+Points nÃ©gatifs :
 
 [role="incremental"]
-- entente difficile au début
-- travail supplémentaire en dehors des heures prévues
+- entente difficile au dÃ©but
+- travail supplÃ©mentaire en dehors des heures prÃ©vues
 
 
 
 Bilan global du projet
 ----------------------
 
-Sur la partie web, le projet a été réalisé dans sa totalié.
+Sur la partie web, le projet a Ã©tÃ© rÃ©alisÃ© dans sa totaliÃ©.
 
-Sur la partie java, le projet a été réalisé à moitié.
+Sur la partie java, le projet a Ã©tÃ© rÃ©alisÃ© Ã  moitiÃ©.
 
 Points positifs du projet :
 
 [role="incremental"]
-- une bonne répartition des tâches
-- découverte des tests caspersjs
-- découverte de la gestion d'un projet en méthode agile
+- une bonne rÃ©partition des tÃ¢ches
+- dÃ©couverte des tests caspersjs
+- dÃ©couverte de la gestion d'un projet en mÃ©thode agile
 - prise en main d'outils de subversion et de l'asciidoc
 
-Points négatifs du projet :
+Points nÃ©gatifs du projet :
 
 [role="incremental"]
-- désaccords
-- plusieurs retour en arrière = perte de temps
+- dÃ©saccords
+- plusieurs retour en arriÃ¨re = perte de temps
 - sprint fini toujours sur la "deadline"
 
 
