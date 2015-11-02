@@ -168,6 +168,7 @@ casper.thenClick({
         this.fill('#sujets div form', {
             'sujet': 'logiciel'
         }, false);  // do not submit
+		this.wait(1000, function() {});
         this.waitWhileVisible({
                     type: 'xpath',
                     path: '//ol[@id="listesujets"]/li['+17+']'
