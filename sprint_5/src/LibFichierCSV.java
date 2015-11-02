@@ -1,4 +1,4 @@
-import java.io.File;
+Ôªøimport java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class LibFichierCSV {
 	public static String ficVoeux = "./data/voeux2014_2015";
 	
 	/**
-	 * Permet de rÈcupÈrer le fichier sujets dans le rÈpertoire sujet.
+	 * Permet de r√©cup√©rer le fichier sujets dans le r√©pertoire sujet.
 	 * 
 	 * @return le nom du fichier Sujet.
 	 **/
@@ -26,7 +26,7 @@ public class LibFichierCSV {
 	}
 	
 	/**
-	 * Permet de rÈcupÈrer le fichier etudiant dans le rÈpertoire Etudiant.
+	 * Permet de r√©cup√©rer le fichier etudiant dans le r√©pertoire Etudiant.
 	 * 
 	 * @return le nom du fichier Etudiant.
 	 **/
@@ -37,7 +37,7 @@ public class LibFichierCSV {
 	}
 	
 	/**
-	 * Permet de rÈcupÈrer le fichier intervenant dans le rÈpertoire Intervenant.
+	 * Permet de r√©cup√©rer le fichier intervenant dans le r√©pertoire Intervenant.
 	 * 
 	 * @return le nom du fichier Intervenant.
 	 **/
@@ -48,7 +48,7 @@ public class LibFichierCSV {
 	}
 	
 	/**
-	 * Permet de rÈcupÈrer le fichier projets dans le rÈpertoire Projet
+	 * Permet de r√©cup√©rer le fichier projets dans le r√©pertoire Projet
 	 * 
 	 * @return le nom du fichier Projet.
 	 **/
@@ -66,7 +66,7 @@ public class LibFichierCSV {
 	 * @return Un tableau contenant toutes les lignes du fichier.
 	 **/
 	public static ArrayList<String[]> lireFichier(String fichier) {
-		/* DÈclaration des variables */
+		/* D√©claration des variables */
 		ArrayList<String[]> tab = new ArrayList<String[]>();
 		Scanner scanner = null;
 		String[] parts = null;
@@ -80,7 +80,7 @@ public class LibFichierCSV {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		// rÈcupËre la premiËre ligne et l'ajoute
+		// r√©cup√®re la premi√®re ligne et l'ajoute
 		if (scanner.hasNextLine()) {
 			line = scanner.nextLine();
 			if (line.contains(";")) {
@@ -109,7 +109,7 @@ public class LibFichierCSV {
 	}
 
 	/**
-	 * Permet d'Ècire dans un fichier, le crÈe s'il n'existe pas dÈj‡.
+	 * Permet d'√©cire dans un fichier, le cr√©e s'il n'existe pas d√©j√†.
 	 * 
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
@@ -117,7 +117,7 @@ public class LibFichierCSV {
 	 *            Contient ce qui doit etre ecrit dans le fichier.
 	 **/
 	public static void ajouterLignes(String fichier, ArrayList<String[]> tab) {
-		/* DÈclaration des variables */
+		/* D√©claration des variables */
 		FileWriter writer = null;
 
 		/* Traitements */
@@ -147,12 +147,12 @@ public class LibFichierCSV {
 	}
 
 	/**
-	 * Ajoute une ligne dans un fichier (le crÈe s'il n'existe pas dÈj‡).
+	 * Ajoute une ligne dans un fichier (le cr√©e s'il n'existe pas d√©j√†).
 	 * 
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
 	 * @param tab
-	 *            Ligne ‡ ajouter.
+	 *            Ligne √† ajouter.
 	 **/
 	public static void ajouterLigne(String fichier, String[] tab) {
 		FileWriter writer = null;
@@ -185,10 +185,10 @@ public class LibFichierCSV {
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
 	 * @param tab
-	 *            Ligne ‡ ajouter ‡ la place de l'ancienne.
+	 *            Ligne √† ajouter √† la place de l'ancienne.
 	 **/
 	public static void modifierLigneByID(String fichier, String[] tab) {
-		/* DÈclaration des variables */
+		/* D√©claration des variables */
 		ArrayList<String[]> ALfichier = lireFichier(fichier);
 		int posID = -1;
 
@@ -232,10 +232,10 @@ public class LibFichierCSV {
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
 	 * @param idLigne
-	 *            Ligne ‡ supprimer.
+	 *            Ligne √† supprimer.
 	 **/
 	public static void supprimerLigneByID(String fichier, int idLigne) {
-		/* DÈclaration des variables */
+		/* D√©claration des variables */
 		ArrayList<String[]> ALfichier = lireFichier(fichier);
 		int posID = -1;
 
@@ -259,16 +259,16 @@ public class LibFichierCSV {
 	}
 
 	/**
-	 * RÈcupËre une ligne avec son identifiant.
+	 * R√©cup√®re une ligne avec son identifiant.
 	 * 
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
 	 * @param idLigne
-	 *            Ligne ‡ retourner.
+	 *            Ligne √† retourner.
 	 * @return Une ligne du fichier.
 	 **/
 	public static String[] getLigneByID(String fichier, int idLigne) {
-		/* DÈclaration des variables */
+		/* D√©claration des variables */
 		ArrayList<String[]> ALfichier = lireFichier(fichier);
 		int posID = -1;
 
@@ -289,11 +289,11 @@ public class LibFichierCSV {
 	}
 
 	/**
-	 * Retourne le plus grand identifiant utilisÈ dans le fichier.
+	 * Retourne le plus grand identifiant utilis√© dans le fichier.
 	 * 
 	 * @param fichier
 	 *            Contient le chemin et le nom du fichier sans extention. Ex : "F:/home/monFichier".
-	 * @return Dernier identifiant utilisÈ dans le fichier.
+	 * @return Dernier identifiant utilis√© dans le fichier.
 	 **/
 	public static int lastID(String fichier) {
 		ArrayList<String[]> ALfichier = lireFichier(fichier);
@@ -320,7 +320,7 @@ public class LibFichierCSV {
 	 * Permet de modifier le fichier contenant la liste des voeux par groupe.
 	 * 
 	 * @param id
-	 *            Le numÈro du groupe.
+	 *            Le num√©ro du groupe.
 	 * @param voeux
 	 *            La liste des voeux.
 	 **/
@@ -337,10 +337,10 @@ public class LibFichierCSV {
 	}
 
 	/**
-	 * Permet de rÈcuperer la liste des voeux pour un groupe donnÈ.
+	 * Permet de r√©cuperer la liste des voeux pour un groupe donn√©.
 	 * 
 	 * @param id
-	 *            Le numÈro du groupe.
+	 *            Le num√©ro du groupe.
 	 * @return La liste des voeux.
 	 **/
 	public static String getVoeux(String id) {

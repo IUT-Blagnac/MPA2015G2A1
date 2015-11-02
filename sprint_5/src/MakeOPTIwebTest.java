@@ -1,11 +1,11 @@
-import java.io.*;
+ï»¿import java.io.*;
 import java.util.ArrayList;
 import junit.textui.TestRunner;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Classe MakeOPTIwebTest permettant de réaliser les tests de la classe MakeOPTIweb.
+ * Classe MakeOPTIwebTest permettant de rÃ©aliser les tests de la classe MakeOPTIweb.
  * 
  * @author groupe2A1
  * @version 1.0
@@ -35,7 +35,7 @@ public class MakeOPTIwebTest extends TestCase {
 	
 	
 	/**
-	 * Permet de vérifier le contenue de la page Etudiant.
+	 * Permet de vÃ©rifier le contenue de la page Etudiant.
 	 **/
 	public void test_page_etudiants() {
 		String expected = "<!-- DEBUT page etudiants -->\n"
@@ -79,21 +79,21 @@ public class MakeOPTIwebTest extends TestCase {
 	}
 
 	/**
-	 * Permet de vérifier le contenue de la page Intervenants.
+	 * Permet de vÃ©rifier le contenue de la page Intervenants.
 	 **/
 	public void test_page_intervenants() {
 		String expected = "<!-- DEBUT page intervenants -->\n<div data-role=\"page\" id=\"intervenants\" data-title=\"OPTIweb - V0.1"
 				+ "\">\n<div data-role=\"header\" data-add-back-btn=\"true\">\n<h1>Intervenants 2014-2015</h1>\n\n</div>\n<div data-role=\"content\">\n\n"
 				+ "<form class=\"ui-filterable\">\n<input id=\"autocomplete-input-intervenant\" name=\"intervenant\" data-type=\"search\" placeholder=\"Intervenant\">\n</form>\n\n"
 				+ "<ul id=\"listeintervenants\" data-role=\"listview\" data-inset=\"true\" data-filter=\"true\" data-filter-reveal=\"false\" data-input=\"#autocomplete-input-intervenant\" data-divider-theme=\"b\">\n<li data-role=\"list-divider\">\nIntervenant<span class=\"ui-li-count\" style=\"right: 110px !important;\" title=\"Client\">Client</span><span class=\"ui-li-count\" title=\"Superviseur\">Superviseur</span>\n</li>\n\n"
-				+ "<li data-find=\"BOULLE Rémi\">\n"
-				+ "<a href=\"#projets\">BOULLE Rémi<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">1</span><span class=\"ui-li-count\" title=\"Superviseur\">1</span></a>\n"
+				+ "<li data-find=\"BOULLE RÃ©mi\">\n"
+				+ "<a href=\"#projets\">BOULLE RÃ©mi<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">1</span><span class=\"ui-li-count\" title=\"Superviseur\">1</span></a>\n"
 				+ "</li>\n"
 				+ "<li data-find=\"BRUEL Jean-Michel\">\n"
 				+ "<a href=\"#projets\">BRUEL Jean-Michel<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">1</span><span class=\"ui-li-count\" title=\"Superviseur\">1</span></a>\n"
 				+ "</li>\n"
-				+ "<li data-find=\"CANUT Marie-Françoise\">\n"
-				+ "<a href=\"#projets\">CANUT Marie-Françoise<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">1</span><span class=\"ui-li-count\" title=\"Superviseur\">1</span></a>\n"
+				+ "<li data-find=\"CANUT Marie-FranÃ§oise\">\n"
+				+ "<a href=\"#projets\">CANUT Marie-FranÃ§oise<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">1</span><span class=\"ui-li-count\" title=\"Superviseur\">1</span></a>\n"
 				+ "</li>\n\n"
 				+ "</ul>\n"
 				+ "</div>\n"
@@ -110,7 +110,7 @@ public class MakeOPTIwebTest extends TestCase {
 	}
 
 	/**
-	 * Permet de vérifier le contenue de la page Sujets.
+	 * Permet de vÃ©rifier le contenue de la page Sujets.
 	 **/
 	public void test_page_sujets() {
 		String expected;
@@ -133,7 +133,7 @@ public class MakeOPTIwebTest extends TestCase {
 				+ "<li data-find=\"[Archeologie]\">"+"\n"
 				+ "<a href=\"#projets\">[Archeologie] <br/>"+"\n"
 				+ "<div style=\"white-space:normal;\">"+"\n"
-				+ "<span><b>Groupe de recherche Chasséen Méridional</b>"+"\n"
+				+ "<span><b>Groupe de recherche ChassÃ©en MÃ©ridional</b>"+"\n"
 				+ "</span><span class=\"ui-li-count\">P</span>"+"\n" //???
 				+ "</div>\n</a>\n</li>\n"
 				
@@ -154,7 +154,7 @@ public class MakeOPTIwebTest extends TestCase {
 	}
 
 	/**
-	 * Permet de vérifier le contenue de la page Projets.
+	 * Permet de vÃ©rifier le contenue de la page Projets.
 	 **/
 	public void test_page_projets() {
 		String expected = "<!-- DEBUT page projets -->\n"
@@ -174,7 +174,7 @@ public class MakeOPTIwebTest extends TestCase {
 				+ "<b>Client :</b> BRUEL Jean-Michel\n"
 				+ "</p>\n"
 				+ "<p>\n"
-				+ "<b>Superviseur :</b> CANUT Marie-Françoise\n"
+				+ "<b>Superviseur :</b> CANUT Marie-FranÃ§oise\n"
 				+ "</p>\n"
 				+ "<p>\n"
 				+ "<b>Groupe F :</b> Arnauld ALEX - \n"
@@ -184,7 +184,7 @@ public class MakeOPTIwebTest extends TestCase {
 				+ "<p>\n"
 				+ "<b>[Architekt]</b> Architekt</p>\n"
 				+ "<p>\n"
-				+ "<b>Client :</b> BOULLE Rémi\n"
+				+ "<b>Client :</b> BOULLE RÃ©mi\n"
 				+ "</p>\n"
 				+ "<p>\n"
 				+ "<b>Superviseur :</b> BRUEL Jean-Michel\n"
@@ -195,12 +195,12 @@ public class MakeOPTIwebTest extends TestCase {
 				+ "</li>\n"
 				+ "<li>\n"
 				+ "<p>\n"
-				+ "<b>[Archeologie]</b> Groupe de recherche Chasséen Méridional</p>\n"
+				+ "<b>[Archeologie]</b> Groupe de recherche ChassÃ©en MÃ©ridional</p>\n"
 				+ "<p>\n"
-				+ "<b>Client :</b> CANUT Marie-Françoise\n"
+				+ "<b>Client :</b> CANUT Marie-FranÃ§oise\n"
 				+ "</p>\n"
 				+ "<p>\n"
-				+ "<b>Superviseur :</b> BOULLE Rémi\n"
+				+ "<b>Superviseur :</b> BOULLE RÃ©mi\n"
 				+ "</p>\n"
 				+ "<p>\n"
 				+ "<b>Groupe P :</b> Jeremy ALVES NETO - \n"
