@@ -34,7 +34,7 @@ script:
   - java -cp .:../../junit.jar MakeOPTIwebTest
   - cd ../
   - java -cp ./bin MakeOPTIweb
-  - cd ./OPTIweb/test
+  - cd ./OPTIweb/tests
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
   - casperjs test casperCredits.js
