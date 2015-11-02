@@ -4,9 +4,9 @@ Asciidoc + Slidy
 :copyright: Groupe2A1
 :backend:   slidy
 :max-width: 45em
-:data-uri:
-:icons:
 :lang: fr
+:duration: 30
+:incremental: 1
 
 Fiche projet - SPRINT 4
 -----------------------
@@ -27,7 +27,6 @@ Bilan fonctionnel du projet
 
 Le projet se compose en 2 parties
 
-[role="incremental"]
 - application java : Opti
 - application web : webOPTI
 

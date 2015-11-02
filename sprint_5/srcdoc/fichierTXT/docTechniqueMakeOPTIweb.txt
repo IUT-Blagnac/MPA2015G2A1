@@ -362,9 +362,22 @@ public static String genIntervenants(String version) {
 <4> Vérifie si id du support technique du projet est égale à l'id de l'intervenant
 
 
+
 == Générateur de JSON
 
 Le générateur de JSON récupère les informations des fichiers CSV pour remplacer le contenu des deux fichiers JSON afin que les tests capser passent malgré les differents changements dans les CSV.
 	
+
+== Tests Casperjs
+
+=== Modification des tests
+
+Les tests fournies lors du travail de l'équipe précédente ne sont valabes uniquemant pour ce logiciel de subversion.
+
+Pour l'éxécution des tests, nous avons rajouté une fonction wait() car les test s'exécutaient trop vite par rapport au temps de réaction de l'application.
+
+=== Amélioration future
+
+Il faudrait générer les .json de tous les fichiers csv et donc modifier les tests casperjs intervenants et sujets.
 
 
