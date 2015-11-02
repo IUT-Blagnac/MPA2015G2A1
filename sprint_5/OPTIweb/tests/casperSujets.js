@@ -1,12 +1,12 @@
 // run with :
 // casperjs test casperSujets.js [--capture=true] [--dump=true]
 
-var CAPTURE = false ;
+var CAPTURE = true ;
 var REP_CAPTURE = "captures/" ;
 var DUMP = false ;
 var REQUIRE = false ;
 var RESOLUTION = "";
-var APP_URL = 'file:///X:/ou/vous/voulez/OPTIweb/test/OPTIweb.html' ;
+var APP_URL = './OptiWeb.html' ;
 var APP_VERSION = '0.1' ;
 
 // Test data ////////////////////////////////////
