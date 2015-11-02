@@ -43,6 +43,7 @@ script:
   - casperjs test casperSujets.js
   - git config --global user.name "charlesbeaudonnet"
   - git config --global user.email "charlesbeaudonnet@users.no-reply.github.com"
+  - git config --global push.default simple
   - git add *
   - git commit -m "[ci skip]"
   - git push
