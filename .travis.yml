@@ -29,6 +29,7 @@ script:
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueWebOPTI.html srcdoc/fichierTXT/docTechniqueWebOPTI.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurMakeOPTIweb.html srcdoc/fichierTXT/docUtilisateurMakeOPTIweb.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurWebOPTI.html srcdoc/fichierTXT/docUtilisateurWebOPTI.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/fichierTXT/presentationFinale.txt
   - ls -alF srcdoc
   - java -cp ./bin:../junit.jar MakeOPTIwebTest
   - java -cp ./bin MakeOPTIweb

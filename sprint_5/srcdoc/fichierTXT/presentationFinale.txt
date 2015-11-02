@@ -1,0 +1,162 @@
+Asciidoc + Slidy
+================
+:author:    Groupe2A1
+:copyright: Groupe2A1
+:backend:   slidy
+:max-width: 45em
+:data-uri:
+:icons:
+:lang: fr
+
+Fiche projet - SPRINT 4
+-----------------------
+
+[icon="../../images/UT2JJ128.png"]
+[TIP]
+====
+Membres de l'équipe :: Fanny MONTUY, Charles BEAUDONNET, Simon ARMUSIEAUX, Alexis BERNINI, Lucas MESSAGER, Alexandre CASES
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+====
+
+Bilan fonctionnel du projet
+---------------------------
+
+Le projet se compose en 2 parties
+
+[role="incremental"]
+- application java : Opti
+- application web : webOPTI
+
+
+Bilan application OPTI
+----------------------
+
+[role="incremental"]
+- Créer un sujet    
+- Modifier un sujet 
+- Supprimer un sujet 
+- Supprimer un intervenant  
+- Changer un intervenant 
+- Créer les voeux d'un groupe 
+- Modifier les voeux d'un groupe   
+- Afficher/modifier/supprimer le contenue des fichiers (etudiants2014_2015.csv,...)
+
+
+Bilan application webOPTI
+-------------------------
+
+[role="incremental"]
+-En tant qu’internaute, je veux accéder à l’application OPTIweb.html depuis tout support fixe ou mobile
+-En tant qu’internaute, je veux pouvoir consulter les projets, les sujets, les étudiants et les intervenants dans des pages séparées
+-En tant qu’internaute, je veux pouvoir consulter le nom des développeurs de l’application, le nom du Product Owner ainsi que les technologies utilisées
+
+* Page Projets
+
+[role="incremental"]
+-En tant qu’internaute, je veux pour chaque projet en voir le nom, le titre, le client, le superviseur, le groupe et les étudiants réalisant le projet
+-En tant qu’internaute, je veux pouvoir rechercher un projet dans la liste des projets en fournissant une chaine de caractère quelconque
+
+* Page Sujets
+
+[role="incremental"]
+-En tant qu’internaute, je veux pour chaque sujet en voir le nom, le titre et le ou les noms des groupes d'étudiants réalisant le sujet
+-En tant qu’internaute, je veux pouvoir rechercher un sujet dans la liste des sujets en fournissant une chaine de caractère quelconque
+-En tant qu’internaute, je veux pouvoir sélectionner un sujet et voir les projets réalisant le sujet
+
+* Page Etudiants
+
+[role="incremental"]
+-En tant qu’internaute, je veux pour chaque étudiant en voir le nom, le prénom ainsi que son groupe
+-En tant qu’internaute, je veux pouvoir rechercher un étudiant dans la liste des étudiants en fournissant une chaine de caractère quelconque
+-En tant qu’internaute, je veux pouvoir sélectionner un étudiant et voir le projet qu’il réalise
+
+* Page Intervenants
+
+[role="incremental"]
+-En tant qu’internaute, je veux pour chaque intervenant en voir le nom, le prénom ainsi que le nombre de ses interventions en tant que Client ou Superviseur
+-En tant qu’internaute, je veux pouvoir rechercher un intervenant dans la liste des intervenants en fournissant une chaine de caractère quelconque
+-En tant qu’internaute, je veux pouvoir sélectionner un intervenant et voir le(s) projet(s) où il intervient
+
+
+Tout a été réalisé. 
+Des documentations ont été réalisé pour le makeOPTI et le webOPTI.
+
+
+Bilan financier du projet
+-------------------------
+
+|Sprint n°|temps estimé|temps passé
+|0|18|22
+|1|29|26.70
+|1bis|20.10|17.35
+|2|11|11.5
+|3|6|6
+|4|34.5|32
+|5|10.5|10
+
+nombre de membres : 6
+taux horaires : 9.61
+nombre d'heures total :  125.55
+
+coutsHT : 1206.54
+
+
+Bilan technique du projet
+-------------------------
+Lors de la conception et du développement nous avons rencontré quelques problèmes :
+
+[role="incremental"]
+- coupures internet
+- problèmes technique
+- café renversé
+- fonctionnement des testJunit
+- conflits des fichiers (dépot SVN)
+- prise en main difficile des tests casperjs 
+- asciidoc déjà maitrisé par certain membres de l'équipe
+
+Bilan humain du projet
+----------------------
+
+Points positifs :
+
+[role="incremental"]
+- ensemble correct
+- aide du professeur
+
+
+Points négatifs :
+
+[role="incremental"]
+- entente difficile au début
+- travail supplémentaire en dehors des heures prévues
+
+
+
+Bilan global du projet
+----------------------
+
+Sur la partie web, le projet a été réalisé dans sa totalié.
+
+Sur la partie java, le projet a été réalisé à moitié.
+
+Points positifs du projet :
+
+[role="incremental"]
+- une bonne répartition des tâches
+- découverte des tests caspersjs
+- découverte de la gestion d'un projet en méthode agile
+- prise en main d'outils de subversion et de l'asciidoc
+
+Points négatifs du projet :
+
+[role="incremental"]
+- désaccords
+- plusieurs retour en arrière = perte de temps
+- sprint fini toujours sur la "deadline"
+
+
+

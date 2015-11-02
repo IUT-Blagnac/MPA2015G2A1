@@ -70,9 +70,6 @@ casper.then(function(){
 ///////////////////////////////////////////////////////////////
 // main 
 casper.run(function() {
-	this.echo("#");
-	this.echo("# That's All Folks");
-	this.echo("#");
     this.test.renderResults(true);
     this.test.done(8);
 });
