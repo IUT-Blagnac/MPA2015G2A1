@@ -32,7 +32,7 @@ public class MakeOPTIweb {
 	 * @throws IOException lève une exception lorsqu'une erreur d'E/S se produit.
 	 */
 	public static void sauverFichier(String site) throws IOException {
-		Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("OptiWeb.html"), "UTF-8"));
+		Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("./OPTIweb/tests/OptiWeb.html"), "UTF-8"));
 		w.write(site);
 		w.close();
 	}
