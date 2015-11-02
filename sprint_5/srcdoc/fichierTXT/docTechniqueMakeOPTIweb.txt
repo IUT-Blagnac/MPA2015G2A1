@@ -1,0 +1,370 @@
+﻿= OPTIweb : Documentation Technique MakeOPTIweb.java
+:Author:  DUT/INFO/M3301
+:lang: fr
+
+
+== Fiche projet - SPRINT 4
+
+[icon="../../images/UT2JJ128.png"]
+[TIP]
+====
+Membres de l'équipe enseignante:: Jean-Michel BRUEL, Jean-Michel INGLEBERT, André PÉNINOU et Olivier ROQUES
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+====
+
+
+== MakeOPTIweb
+
+main de la page MakeOPTIweb
+
+[source,java]
+----
+public static void main(String[] args) throws IOException {
+	sauverFichier(genererPage("0.1"));	
+}
+----
+	
+On utlise une fonction sauverFichier permettant d'enregistrer dans un fichier nommé Optiweb.html le code source de la page html
+
+[source,java]
+----
+public static void sauverFichier(String site) throws IOException {
+		Writer w = new BufferedWriter(new
+		OutputStreamWriter(new FileOutputStream("OptiWeb.html"), "UTF-8"));
+		w.write(site);
+		w.close();
+}
+----
+	
+
+On utilise la fonction genererPage permettant de retourner tout le code source de la page html Optiweb.html
+
+[source,java]
+----
+	public static String genererPage(String version) {		
+	
+	String site = "<!DOCTYPE html>\n"
+			+ "<html>\n"
+			+ "<head>\n"
+			+ "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n"
+			+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+			+ "<meta name=\"generator\" content=\"OPTIweb VOPTIweb\" />\n"
+			+ "<title>"
+			+ version
+			+ " - V"
+			+ version
+			+ "</title>\n"
+			+ "<link rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" />\n"
+			+ "<link rel=\"stylesheet\" href=\"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css\" />\n"
+			+ "<script src=\"http://code.jquery.com/jquery-1.9.1.min.js\"></script>\n"
+			+ "<script src=\"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js\"></script>\n"
+			+ "<style type='text/css'>  \n"
+			+ "@media all and (orientation:portrait) { .landscape {display: none;} }\n"
+			+ "@media all and (orientation:landscape) { .landscape {display: inline;} }\n"
+			+ "</style>\n" + "</head><body>\n\n";
+
+	site = site + pageAccueil(version); // <1>
+
+	site = site + pageCredits(version); // <2>
+
+	site = site + genProjet(version); // <3>
+
+	site = site + genererSujet(version); // <4>
+
+	site = site + MakeEtu(version); // <5>
+
+	site += genIntervenants(version); // <6>
+
+
+	site = site
+			+ "<script>\n"
+			+ "// li click handler which fills the projects search bar \n"
+			+ "// with the value of the current data-find attribute\n"
+			+ "$( 'li[data-find]' ).on( 'click',function(event){\n"
+			+ "$(\"#autocomplete-input-projet\").val($(this).attr('data-find')).trigger('change');\n"
+			+ "});\n" + "</script>\n" + "</body>\n" + "</html>\n\n";
+
+	return site;
+}
+----
+	
+<1> Permet d'appeler la fonction pageAccueil(version) permettant de générer de code la page d'accueil
+<2> Permet d'appeler la fonction pageCredits(version) permettant de générer de code la page de Crédits
+<3> Permet d'appeler la fonction genProjet(version) permettant de générer de code la page Projets
+<4> Permet d'appeler la fonction genererSujet(version) permettant de générer de code la page Sujets
+<5> Permet d'appeler la fonction MakeEtu(version) permettant de générer de code la page Etudiants
+<6> Permet d'appeler la fonction genIntervenants(version) permettant de générer de code la page Intervenants
+	
+== Accueil
+
+La fonction pageAccueil(version) génére automatiquement le code html lié à la page Accueil.
+
+
+== Crédits
+
+La fonction pageCredits(version) génére automatiquement les code html lié à la page Crédits. 
+	
+== Sujets
+La fonction genererSujet(version) génére automatiquement les commandes html lié à la page Sujets 
+affichant le nom du sujet, la descrition, et les groupes affecté.
+Les commande html sont retourné par un string nommé pageSujet.
+
+=== Génération du code html de base
+
+La fonction va générer le code de base, c'est à dire le début et la fin de la page html.
+	
+[source,java]
+----
+		pageSujet = "<!-- DEBUT page sujets -->"+"\n";
+		pageSujet += "<div data-role=\"page\" id=\"sujets\" data-title=\"OPTIweb - V0.1\">"+"\n";
+		pageSujet += "<div data-role=\"header\" data-add-back-btn=\"true\">" + "\n"; <!-- <1> -->
+		
+		
+		pageSujet = pageSujet + "</ol>"+"\n"+"</div>\n<div data-role=\"footer\">\n <h4>OPTIweb V<span class=\"landscape\">ersion </span>0.1 <i class=\"fa fa-copy fa-2x\"></i></h4>\n</div>\n</div>/n<!-- FIN page sujets -->"; <!-- <2> -->
+----
+<1>Début du code générant le bouton de retour à la page d’accueil, le Champ de recherche et l'Item d’entête de liste 
+<2>Fin de la génération du code HTML.
+
+=== Génération du code html adapté au fichier sujet.csv
+
+Dans cette partie du code placé entre les deux parties précédentes permet de générer un code html adapté à tout les sujets existants.
+	
+[source,java]
+----
+	for(int ligne = 1; ligne<listeSujet.size(); ligne++){ //<1>
+		pageSujet = pageSujet+"<li data-find=\"["+listeSujet.get(ligne)[1]+"]\">"+"\n"; //<2>
+		pageSujet += "<a href=\"#projets\">["+listeSujet.get(ligne)[1]+"] <br/>"+"\n"; //<2>
+		pageSujet += "<div style=\"white-space:normal;\">"+"\n";
+		pageSujet += "<span><b>"+listeSujet.get(ligne)[2]+"</b>"+"\n"; //<3>
+		pageSujet += "</span><span class=\"ui-li-count\">"+getGroupe(ligne)+"</span>"+"\n"; //<4>
+		pageSujet += "</div>\n</a>\n</li>\n";
+	}
+----
+<1> Boucle "for" observant tout les sujets du fichier.
+<2> Intégration du nom du sujet.
+<3> Intégration de la description du sujet.
+<4> Recherche et intégration des groupes affecté au sujet.
+	
+=== Recherche du groupe affecté
+	
+Cette fonction recherche le/les groupe/s affecté/s au sujet.
+	
+[source,java]
+----
+private static String getGroupe(int pLigne){
+	ArrayList<String[]> listeProjet = new ArrayList<String[]>(); 
+	listeProjet = LibFichierCSV.lireFichier(LibFichierCSV.ficProj); //<1>
+	String groupe = ""; //<2>
+	for (int i = 1; i<listeProjet.size();i++){ //<3>
+		if (Integer.parseInt(listeProjet.get(i)[2]) == pLigne){
+			if(!groupe.equals("")){
+				groupe += " "; //<3>
+			}
+			groupe += listeProjet.get(i)[1]; //<4>
+		}
+	}
+	
+	return groupe;
+	
+}
+----
+<1> Lecture du fichier projet dans listeProjet.
+<2> Création d'un String vide qui regroupera le nom des groupes.
+<3> Si le String contient déjà un groupe, affecte un espace.
+<4> Ajoute un groupe au String.
+
+	
+== Etudiants
+
+La fonction MakeEtu(version) génére automatiquement les commandes html lié à la page Etudiants.
+
+[source,java]
+----
+public static String MakeEtu(String version) {
+	// Déclaration des variables
+	String chaine;
+	ArrayList<String[]> listEtu;
+
+	// Initialisation des variables
+	chaine = "";
+	listEtu = LibFichierCSV.lireFichier(LibFichierCSV.ficEtu());
+
+	// Traitements
+	listEtu.remove(0); // Suppression de la ligne d'entêtes
+
+	// Tri de la liste par Nom
+	Collections.sort(listEtu, new Comparator<String[]>() {
+		@Override
+		public int compare(String[] etu1, String[] etu2) {
+			return etu1[2].compareTo(etu2[2]);
+		}
+	});
+
+	chaine += "<!-- DEBUT page etudiants -->\n<div data-role=\"page\" id=\"etudiants\" data-title=\"OPTIweb - V";
+	chaine += version;
+	chaine += "\">\n<div data-role=\"header\" data-add-back-btn=\"true\">\n<h1>Etudiants 2014-2015</h1>\n\n</div>\n<div data-role=\"content\">\n\n<form class=\"ui-filterable\">\n<input id=\"autocomplete-input-etudiant\" name=\"etudiant\" data-type=\"search\" placeholder=\"Etudiant ou Groupe X\">\n</form>\n<ol id=\"listeetudiants\" data-role=\"listview\" data-inset=\"true\" data-filter=\"true\" data-filter-reveal=\"false\" data-input=\"#autocomplete-input-etudiant\" data-divider-theme=\"b\">\n<li data-role=\"list-divider\">\nEtudiant<span class=\"ui-li-count\" title=\"Groupe\" style=\"right: 40px !important;\">Groupe</span>\n</li>\n";
+
+	for (String[] s : listEtu) { // Pour chaque étudiant du fichier
+		chaine += "<li data-find=\"";
+		chaine += s[3] + " " + s[2]; // Prénom Nom
+		chaine += "\">\n";
+		chaine += "<a href=\"#projets\">";
+		chaine += s[2] + " " + s[3]; // Nom Prénom
+		chaine += "<span class=\"ui-li-count\" title=\"Groupe\">Groupe ";
+		chaine += s[0]; // Groupe
+		chaine += "</span>\n";
+		chaine += "</a>\n";
+		chaine += "</li>\n";
+	}
+
+	chaine += "</ol>\n</div>\n<div data-role=\"footer\">\n <h4>OPTIweb V<span class=\"landscape\">ersion </span>";
+	chaine += version;
+	chaine += " <i class=\"fa fa-group fa-2x\"></i></h4>\n</div>\n</div>\n<!-- FIN page etudiants -->\n";
+	return chaine;
+}
+----
+	
+	
+== Projets
+
+La fonction genProjet(version) génére automatiquement les commandes html lié à la page Projets.
+	
+[source,java]
+----
+public static String genProjet(String version) {
+
+	ArrayList<String[]> listeprojet = LibFichierCSV.lireFichier(LibFichierCSV.ficProj());
+	;
+	String projet;
+	ArrayList<String[]> intervenants = LibFichierCSV.lireFichier(LibFichierCSV.ficInter());
+	ArrayList<String[]> listesujet = LibFichierCSV.lireFichier(LibFichierCSV.ficSuj());
+	ArrayList<String[]> listeEtu = LibFichierCSV.lireFichier(LibFichierCSV.ficEtu());
+
+	projet = "<!-- DEBUT page projets -->\n" + "<div data-role=\"page\" id=\"projets\" data-title=\"OPTIweb - V"
+			+ version + "\">" + "\n";
+	projet += "<div data-role=\"header\" data-add-back-btn=\"true\">" + "\n";
+	projet += "<h1>Projets 2014-2015</h1>" + "\n";
+	projet += "</div>" + "\n";
+
+	projet += "<div data-role=\"content\">" + "\n";
+	projet += "<form class=\"ui-filterable\">" + "\n";
+	projet += "<input id=\"autocomplete-input-projet\" name=\"projet\" data-type=\"search\" placeholder=\"Vous cherchez ?...\" >"
+			+ "\n";
+	projet += "</form>" + "\n";
+	projet += "<ol id=\"listeprojets\" data-role=\"listview\" data-inset=\"true\" data-filter=\"true\" data-filter-reveal=\"false\" data-input=\"#autocomplete-input-projet\">"
+			+ "\n";
+
+	for (String[] pro : listeprojet) { //<1>
+		if (!pro[0].equals("id")) {
+			projet += "<li>\n<p>\n";
+			for (String[] suj : listesujet) { //<2>
+				if (pro[2].equals(suj[0])) {
+					projet += "<b>[" + suj[1] + "]</b>" + " " + suj[2];
+				}
+			}
+			projet += "</p>\n<p>\n";
+			for (String[] in : intervenants) { //<3>
+				if (pro[3].equals(in[0])) {  //<4>
+					projet += "<b>Client :</b> ";
+					projet += in[2] + " " + in[1] + "\n";
+				}
+			}
+
+			projet += "</p>\n<p>\n";
+			for (String[] in : intervenants) { //<3>
+				if (pro[4].equals(in[0])) { //<5>
+					projet += "<b>Superviseur :</b> ";
+					projet += in[2] + " " + in[1] + "\n";
+				}
+			}
+			projet += "</p>\n<p>\n";
+			projet += "<b>Groupe " + pro[1] + " :</b> ";
+			for (String[] etu : listeEtu) { //<6>
+				if (pro[1].equals(etu[0])) { 
+					projet += etu[3] + " " + etu[2] + " - ";
+				}
+			}
+			projet += "\n</p>\n</li>\n";
+		}
+	}
+
+	projet += "</ol>" + "\n";
+	projet += "</div>" + "\n";
+
+	projet += "<div data-role=\"footer\">" + "\n";
+	projet += "<h4>OPTIweb V<span class=\"landscape\">ersion </span>" + version
+			+ " <i class=\"fa fa-tasks fa-2x\"></i></h4>" + "\n";
+	projet += "</div>" + "\n";
+	projet += "</div> \n<!-- FIN page projets -->\n";
+
+	return projet;
+
+}
+----
+<1> Permet d'obtenir un tableau de string contenant tous les projets.
+<2> Permet d'obtenir un tableau de string contenant tous les sujets.
+<3> Permet d'obtenir un tableau de string contenant tous les intervenants.
+<4> Sélectionne uniquement les clients.
+<5> Sélectionne uniquement les superviseur.
+<6> Permet d'obtenir un tableau de string contenant tous les étudiants.
+
+	
+== Intervenants
+
+La fonction genIntervenants(version) génére automatiquement les commandes html lié à la page Intervenants.
+
+[source,java]
+----
+public static String genIntervenants(String version) {
+	ArrayList<String[]> intervenants = LibFichierCSV.lireFichier(LibFichierCSV.ficInter());
+	ArrayList<String[]> projets = LibFichierCSV.lireFichier(LibFichierCSV.ficProj());
+	int nbCli;
+	int nbSup;
+	String pageInt = "<!-- DEBUT page intervenants -->\n<div data-role=\"page\" id=\"intervenants\" data-title=\"OPTIweb - V"
+			+ version
+			+ "\">\n<div data-role=\"header\" data-add-back-btn=\"true\">\n<h1>Intervenants 2014-2015</h1>\n\n</div>\n<div data-role=\"content\">\n\n";
+	pageInt += "<form class=\"ui-filterable\">\n<input id=\"autocomplete-input-intervenant\" name=\"intervenant\" data-type=\"search\" placeholder=\"Intervenant\">\n</form>\n\n";
+	pageInt += "<ul id=\"listeintervenants\" data-role=\"listview\" data-inset=\"true\" data-filter=\"true\" data-filter-reveal=\"false\" data-input=\"#autocomplete-input-intervenant\" data-divider-theme=\"b\">\n<li data-role=\"list-divider\">\nIntervenant<span class=\"ui-li-count\" style=\"right: 110px !important;\" title=\"Client\">Client</span><span class=\"ui-li-count\" title=\"Superviseur\">Superviseur</span>\n</li>\n\n";
+
+	for (String[] intervenant : intervenants) {//<1>
+		if (!intervenant[0].equals("id")) {
+			nbCli = 0;
+			nbSup = 0;
+			for (String[] projet : projets) {//<2>
+				if (projet[3].equals(intervenant[0]))//<3>
+					nbCli++;
+				if (projet[4].equals(intervenant[0]))//<4>
+					nbSup++;
+			}
+			pageInt += "<li data-find=\"" + intervenant[2] + " " + intervenant[1] + "\">\n<a href=\"#projets\">"
+					+ intervenant[2] + " " + intervenant[1]
+					+ "<span class=\"ui-li-count\" style=\"right: 120px !important;\" title=\"Client\">";
+			pageInt += nbCli;
+			pageInt += "</span><span class=\"ui-li-count\" title=\"Superviseur\">";
+			pageInt += nbSup;
+			pageInt += "</span></a>\n</li>\n";
+		}
+	}
+	pageInt += "\n";
+	pageInt += "</ul>\n</div>\n<div data-role=\"footer\">\n<h4>OPTIweb V<span class=\"landscape\">ersion </span>"
+			+ version
+			+ " <i class=\"fa fa-group fa-2x\"></i></h4>\n</div>\n</div>\n<!-- FIN page intervenants -->\n\n";
+	return pageInt;
+}
+----
+<1> Permet d'obtenir un tableau de string contenant tous les intervenants.
+<2> Permet d'obtenir un tableau de String contenant tous les projets.
+<3> Vérifie si id du client du projet est égale à l'id de l'intervenant
+<4> Vérifie si id du support technique du projet est égale à l'id de l'intervenant
+
+
+== Générateur de JSON
+
+Le générateur de JSON récupère les informations des fichiers CSV pour remplacer le contenu des deux fichiers JSON afin que les tests capser passent malgré les differents changements dans les CSV.
+	
+
+

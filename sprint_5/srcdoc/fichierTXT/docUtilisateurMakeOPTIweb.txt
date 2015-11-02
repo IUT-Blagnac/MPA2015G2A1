@@ -1,0 +1,56 @@
+= OPTIweb : Documentation Utilisateur MakeOPTIweb.java
+:Author:  DUT/INFO/M3301
+:lang: fr
+
+
+== Introduction
+
+Le programme makeOPTIweb.java fabrique le fichier OPTIweb.html à partir des fichiers csv (Sujets, Etudiants, Intervenants, Projets …).
+
+== Fiche projet - SPRINT 4
+
+[icon="../../images/UT2JJ128.png"]
+
+[NOTE]
+====
+Membres de l'équipe enseignante:: Jean-Michel BRUEL, Jean-Michel INGLEBERT, André PÉNINOU et Olivier ROQUES
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+====
+
+
+== Mise en place de l'environnement
+
+Aller dans le répertoire data.
+
+Enregistrer le fichier.csv correspondant aux étudiants dans le répertoire 'etudiant'.
+
+Enregistrer le fichier.csv correspondant aux projets dans le répertoire 'projet'.
+
+Enregistrer le fichier.csv correspondant aux sujets dans le répertoire 'sujet'.
+
+Enregistrer le fichier.csv correspondant aux intervenants dans le répertoire 'intervenant'.
+
+Attention : Il ne doit y avoir qu'un seul fichier dans chaque répertoire.
+
+== Lancement du MakeOPTIweb
+
+Double-cliquer sur le fichier make.bat.
+
+Un fichier OPTIweb.html est créé et est mis à la racine du répertoire sprint4.
+
+Une documentation JAVA est également réalisée au même moment. Vous la trouverez dans le répertoire bin.
+
+Pour la visualiser, aller dans le répertoire doc et double cliquez sur le fichier index.html. 
+
+
+
+
+
+
+
+
+

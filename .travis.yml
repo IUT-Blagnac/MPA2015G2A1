@@ -19,13 +19,20 @@ script:
   - echo Hello from DUT INFO Blagnac
   - ls -alF
   - cd sprint_5
-  - javac -cp .:./bin -d ./bin ./src/HelloMonde.java
-  - javac -cp .:./bin:../junit.jar -d ./bin ./src/HelloMondeTest.java
+  - javac -cp .:./bin -d ./bin ./src/LibFichierCSV.java
+  - javac -cp .:./bin -d ./bin ./src/MakeJSON.java
+  - javac -cp .:./bin -d ./bin ./src/MakeOPTIweb.java
+  - javac -cp .:./bin:../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
   - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechnique.html srcdoc/fichierTXT/docTechnique.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueMakeOPTIweb.html srcdoc/fichierTXT/docTechniqueMakeOPTIweb.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueWebOPTI.html srcdoc/fichierTXT/docTechniqueWebOPTI.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurMakeOPTIweb.html srcdoc/fichierTXT/docUtilisateurMakeOPTIweb.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurWebOPTI.html srcdoc/fichierTXT/docUtilisateurWebOPTI.txt
   - ls -alF srcdoc
   - cd bin
-  - java -cp .:../../junit.jar HelloMondeTest
+  - java -cp .:../../junit.jar MakeOPTIwebTest
+  - java -cp MakeOPTIweb
   - cd ../OPTIweb/test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
