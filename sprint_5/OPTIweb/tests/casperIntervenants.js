@@ -146,7 +146,8 @@ casper.thenClick({
         this.fill('#intervenants div form', {
             'intervenant': 'BRUEL'
         }, false);  // do not submit
-        this.waitWhileVisible({
+        this.wait(1000, function() {});
+		this.waitWhileVisible({
                     type: 'xpath',
                     path: '//ol[@id="listeintervenants"]/li['+(INTERVENANTS.length + 1)+']'
                     },function(){
