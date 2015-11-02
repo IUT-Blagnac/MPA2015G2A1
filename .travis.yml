@@ -16,17 +16,19 @@ script:
   - python asciidoc-8.6.7/asciidoc.py --version
   - dot -V
   - casperjs --version
-  - echo Hello from DUT INFO Blagnac
+  - echo Hello from DUT INFO Blagnac 2015
   - ls -alF
+  
   - cd sprint_5
   - javac -cp .:./bin -d ./bin ./src/LibFichierCSV.java
   - javac -cp .:./bin -d ./bin ./src/MakeJSON.java
   - javac -cp .:./bin -d ./bin ./src/MakeOPTIweb.java
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
-#  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - ls -alF srcdoc
+  
   - java -cp ./bin:../junit.jar MakeOPTIwebTest
   - java -cp ./bin MakeOPTIweb
+  
   - cd ./OPTIweb/tests
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
@@ -36,14 +38,15 @@ script:
   - casperjs test casperProjets.js
   - casperjs test casperSujets.js
   
-  - echo generation de la doc
-  - cd ../../
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechnique.html srcdoc/fichierTXT/docTechnique.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueMakeOPTIweb.html srcdoc/fichierTXT/docTechniqueMakeOPTIweb.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueWebOPTI.html srcdoc/fichierTXT/docTechniqueWebOPTI.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurMakeOPTIweb.html srcdoc/fichierTXT/docUtilisateurMakeOPTIweb.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurWebOPTI.html srcdoc/fichierTXT/docUtilisateurWebOPTI.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/fichierTXT/presentationFinale.txt
+#  - echo generation de la doc
+#  - cd ../../
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechnique.html srcdoc/fichierTXT/docTechnique.txt
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueMakeOPTIweb.html srcdoc/fichierTXT/docTechniqueMakeOPTIweb.txt
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docTechniqueWebOPTI.html srcdoc/fichierTXT/docTechniqueWebOPTI.txt
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurMakeOPTIweb.html srcdoc/fichierTXT/docUtilisateurMakeOPTIweb.txt
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurWebOPTI.html srcdoc/fichierTXT/docUtilisateurWebOPTI.txt
+#  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/fichierTXT/presentationFinale.txt
+
 #  - git config --global user.name "charlesbeaudonnet"
 #  - git config --global user.email "charlesbeaudonnet@users.no-reply.github.com"
 #  - git config --global push.default simple
