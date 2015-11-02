@@ -41,8 +41,8 @@ script:
   - casperjs test casperIntervenants.js
   - casperjs test casperProjets.js
   - casperjs test casperSujets.js
-  - git config --global user.name id
-  - git config --global user.passwd mdp
+  - git config --global user.name "charlesbeaudonnet"
+  - git config --global user.email "charlesbeaudonnet@users.no-reply.github.com"
   - git add *
   - git commit -m "[ci skip]"
   - git push
