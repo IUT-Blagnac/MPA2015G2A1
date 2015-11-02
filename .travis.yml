@@ -30,9 +30,7 @@ script:
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurMakeOPTIweb.html srcdoc/fichierTXT/docUtilisateurMakeOPTIweb.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/docUtilisateurWebOPTI.html srcdoc/fichierTXT/docUtilisateurWebOPTI.txt
   - ls -alF srcdoc
-  - cd bin
-  - java -cp .:../../junit.jar MakeOPTIwebTest
-  - cd ../
+  - java -cp ./bin:../junit.jar MakeOPTIwebTest
   - java -cp ./bin MakeOPTIweb
   - cd ./OPTIweb/tests
   - cp OPTIwebprof.html /tmp/OPTIweb.html
