@@ -28,7 +28,7 @@ public class MakeOPTIwebTest extends TestCase {
 	}
 
 	protected void setUp() throws IOException {
-		executionProgrammeATester = Runtime.getRuntime().exec("java.exe -cp .;bin " + programmeATester);
+		executionProgrammeATester = Runtime.getRuntime().exec("java -cp .;bin " + programmeATester);
 		ecranProgrammeATester = new BufferedReader(new InputStreamReader(executionProgrammeATester.getInputStream()));
 		clavierProgrammeATester = new BufferedWriter(new OutputStreamWriter(executionProgrammeATester.getOutputStream()));
 	}
