@@ -1,4 +1,4 @@
-﻿import java.io.*;
+import java.io.*;
 import java.util.ArrayList;
 import junit.textui.TestRunner;
 import junit.framework.TestCase;
