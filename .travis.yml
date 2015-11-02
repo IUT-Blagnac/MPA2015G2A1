@@ -32,7 +32,7 @@ script:
   - ls -alF srcdoc
   - cd bin
   - java -cp .:../../junit.jar MakeOPTIwebTest
-  - java -cp MakeOPTIweb
+  - java -cp . MakeOPTIweb
   - cd ../OPTIweb/test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
