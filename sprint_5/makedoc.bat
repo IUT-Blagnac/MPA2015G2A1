@@ -27,5 +27,10 @@ python %ASCIIDOCDIR%asciidoc.py -a toc -a source-highlighter=pygments -o %SRCDOC
 @echo ///////////////////////////////////////////////////////
 javadoc -classpath %BINDIR%;tools/junit.jar -d %BINDIR%/doc @files.txt
 
+@echo ///////////////////////////////////////////////////////
+@echo // COMPILATION des la présentation finale
+@echo ///////////////////////////////////////////////////////
+python %ASCIIDOCDIR%asciidoc.py --backend slidy -o %SRCDOCDIR%presentationFinale.html %SRCDOCDIRTXT%presentationFinale.txt
+
 
 pause
