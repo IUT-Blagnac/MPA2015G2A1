@@ -1,0 +1,243 @@
+Présentation Finale Projet MPA
+==============================
+:author:    Groupe2A1
+:copyright: Groupe2A1
+:backend:   slidy
+:max-width: 45em
+:lang: fr
+:duration: 30
+
+
+Fiche projet - SPRINT 4
+-----------------------
+ScrumMaster :: Fanny MONTUY
+
+Membres de l'équipe :: 
+- Fanny MONTUY,
+- Charles BEAUDONNET, 
+- Simon ARMUSIEAUX, 
+- Alexis BERNINI, 
+- Lucas MESSAGER, 
+- Alexandre CASES
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+
+
+Bilan fonctionnel du projet
+---------------------------
+
+Le projet se compose en 2 parties :
+
+- application java : Opti
+- application web : webOPTI
+
+Bilan fonctionnel du projet
+---------------------------
+
+Bilan application OPTI
+~~~~~~~~~~~~~~~~~~~~~~
+
+[role="incremental"]
+- Créer un sujet    
+- Modifier un sujet 
+- Supprimer un sujet 
+- Supprimer un intervenant  
+- Changer un intervenant 
+- Créer les voeux d'un groupe 
+- Modifier les voeux d'un groupe   
+- Afficher/modifier/supprimer le contenu des fichiers (etudiants2014_2015.csv,...)
+
+
+Bilan fonctionnel du projet
+---------------------------
+
+Bilan application webOPTI
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- En tant qu’internaute, je veux accéder à l’application OPTIweb.html depuis tout support fixe ou mobile
+- En tant qu’internaute, je veux pouvoir consulter les projets, les sujets, les étudiants et les intervenants dans des pages séparées
+- En tant qu’internaute, je veux pouvoir consulter le nom des développeurs de l’application, le nom du Product Owner ainsi que les technologies utilisées
+
+Page Projets
+^^^^^^^^^^^^
+
+- En tant qu’internaute, je veux pour chaque projet en voir le nom, le titre, le client, le superviseur, le groupe et les étudiants réalisant le projet
+- En tant qu’internaute, je veux pouvoir rechercher un projet dans la liste des projets en fournissant une chaine de caractère quelconque
+
+Page Sujets
+^^^^^^^^^^^
+
+- En tant qu’internaute, je veux pour chaque sujet en voir le nom, le titre et le ou les noms des groupes d'étudiants réalisant le sujet
+- En tant qu’internaute, je veux pouvoir rechercher un sujet dans la liste des sujets en fournissant une chaine de caractère quelconque
+- En tant qu’internaute, je veux pouvoir sélectionner un sujet et voir les projets réalisant le sujet
+
+Page Etudiants
+^^^^^^^^^^^^^^
+
+- En tant qu’internaute, je veux pour chaque étudiant en voir le nom, le prénom ainsi que son groupe
+- En tant qu’internaute, je veux pouvoir rechercher un étudiant dans la liste des étudiants en fournissant une chaine de caractère quelconque
+- En tant qu’internaute, je veux pouvoir sélectionner un étudiant et voir le projet qu’il réalise
+
+Page Intervenants
+^^^^^^^^^^^^^^^^^
+
+- En tant qu’internaute, je veux pour chaque intervenant en voir le nom, le prénom ainsi que le nombre de ses interventions en tant que Client ou Superviseur
+- En tant qu’internaute, je veux pouvoir rechercher un intervenant dans la liste des intervenants en fournissant une chaine de caractère quelconque
+- En tant qu’internaute, je veux pouvoir sélectionner un intervenant et voir le(s) projet(s) où il intervient
+
+
+Tout a été réalisé. 
+
+Des documentations ont été réalisé pour le makeOPTI et le webOPTI.
+
+
+Bilan financier du projet
+-------------------------
+
+[width="35%"]
+|==================================
+|Sprint n°|temps estimé|temps passé
+|0|18|22
+|1|29|26.70
+|1bis|20.10|17.35
+|2|11|11.5
+|3|6|6
+|4|34.5|32
+|5|10.5|10
+|==================================
+
+nombre de membres : 6
+
+taux horaires : 9.61 euros
+
+nombre d'heures total :  125.55
+
+coutsHT : 1206.54 euros.
+
+
+Bilan technique du projet
+-------------------------
+
+Objectifs et résultats
+~~~~~~~~~~~~~~~~~~~~~~
+
+[width="60%"]
+|===============================================================================================================================================================
+|Choix techniques|points forts|points faibles
+|Utilisation de la méthode agile| Réalisation des documentations et de l'application en parallèle| Obligation de prévoir + documentation réalisée trop en avance
+|Utilisation d'un dépot SVN et redmine|Modification en silmutané de fichiers + plannification des tâches|
+|Utilisation du logiciel Eclipse| Code clair|
+|================================================================================================================================================================
+
+Bilan technique du projet
+-------------------------
+
+Problèmes rencontrés et solutions apportées
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Evolution des fonctionnalités
+* Sous-estimation de temps de réalisation d'une tâche
+* Coupures internet
+* Décisions un peu flou
+* Conflits des fichiers (dépot SVN)
+* Prise en main difficile des tests casperjs 
+* Café renversé
+* Fonctionnement des testJunit
+
+Bilan technique du projet
+-------------------------
+
+Eléments réutilisables
+~~~~~~~~~~~~~~~~~~~~~~
+	
+Utilisation des outils
+^^^^^^^^^^^^^^^^^^^^^^
+
+- Asciidoc déjà maitrisé par certains membres de l'équipe
+- Faire attention lors des commits
+
+Savoir-faire acquis
+^^^^^^^^^^^^^^^^^^^^
+
+- Utilisation de la méthode agile
+- Utilisation du tableau des tâches de redmine|Modification
+
+Pièges à éviter
+^^^^^^^^^^^^^^^
+
+- Distribuer les tâches à la hâte sans se concerter
+- Se lancer dans le code sans se renseigner sur les tests
+
+	
+Bilan humain du projet
+----------------------
+
+Organisation mise en œuvre
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Points positifs :
+^^^^^^^^^^^^^^^^^
+
+- Répartition des tâches correcte
+
+
+Points négatifs :
+^^^^^^^^^^^^^^^^^
+
+- Travail supplémentaire en dehors des heures prévues
+- Réunion en début de sprint non productive
+
+Bilan des ressources humaines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Entente difficile au début
+- Entraide entre les membres
+
+
+Bilan global du projet
+----------------------
+
+Impression générale du chef de projet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Bon résultats
+* Travaux demandés réalisés en partie faute de temps
+* Bon investissement dans le travail
+
+
+
+Suites possibles au projet
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Code de l'application OPTI peut être repris
+
+
+Conclusion
+----------
+Sur la partie web, le projet a été réalisé dans sa totalité.
+
+Sur la partie java, le projet a été réalisé à moitié.
+
+Points positifs du projet :
+
+[role="incremental"]
+- Une bonne répartition des tâches
+- Découverte des tests caspersjs
+- Découverte de la gestion d'un projet en méthode agile
+- Prise en main d'outils de subversion et de l'asciidoc
+
+Points négatifs du projet :
+
+[role="incremental"]
+- Désaccords
+- Plusieurs retour en arrière = perte de temps
+- Sprint fini toujours sur la "deadline"
+
+
+Remerciements
+-------------
+
+Nous tenions à remercier notre encadrant M Fabrice Pelleau pour son aide.
+
+Fin ::
